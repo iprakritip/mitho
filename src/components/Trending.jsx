@@ -9,7 +9,7 @@ const getTrending = async()=>{
     `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_API_KEY}&number=9`
     );
     const data = await api.json();
-    console.log("data");
+    console.log(data);
 }
 
 useEffect=(()=>{
