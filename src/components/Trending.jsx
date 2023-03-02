@@ -58,6 +58,10 @@ const [trending, setTrending]= useState([]);
 
 const Wrapper =styled.div`
 margin: 4rem 0;
+
+h4{
+  margin-bottom:1rem;
+}
 `;
 const Card = styled.div`
 min-height:25rem;
