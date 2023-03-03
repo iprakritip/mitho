@@ -45,7 +45,7 @@ function Recipe() {
                 <h3 dangerouslySetInnerHTML={{__html:details.instructions}}></h3>
             </div>
             )}
-            {activeTab === "instructions" && (
+            {activeTab === "ingredients" && (
                  <ul>
                   {details?.extendedIngredients?.length>0 && details.extendedIngredients.map((ingredient)=>{
                     return(
@@ -80,6 +80,7 @@ const Button =styled.button`
  border: 2px solid black;
  margin-right:2rem;
  font-weight:600;
+ cursor:pointer;
 `;
 const Info= styled.div`
 margin-top:2.8rem;

@@ -4,13 +4,16 @@ import {BrowserRouter} from "react-router-dom";
 import Search from "./components/Search";
 import styled from "styled-components";
 import logo from "./img/Mitho-logo.png";
+import {Link} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter> 
-       <Nav to={"/"}>
+       <Nav>
+        <Logo to={"/"}>
          <img src={logo} alt="mitho-logo" />
+        </Logo>
        </Nav>
        <Search />
        <Category />
@@ -38,6 +41,10 @@ img{
   margin:0.3rem 0;
 }
 `;
+
+const Logo=styled(Link)`
+
+`
 
 
 export default App;

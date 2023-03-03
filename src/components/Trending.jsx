@@ -35,7 +35,7 @@ const [trending, setTrending]= useState([]);
           <h4>Trending Picks</h4>
           <Splide options={{
             perPage:4,
-            arrows:false,
+            arrows:true,
             pagination:false,
             drag: "free",
             gap: "1rem",
