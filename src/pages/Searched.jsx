@@ -45,6 +45,9 @@ const Card = styled.div`
  img{
     width:100%;
     border-radius:2rem;
+    @media screen and (max-width: 480px){
+      border-radius:1rem;
+    }
  }
  a{
     text-decoration:none;

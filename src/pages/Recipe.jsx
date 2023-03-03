@@ -29,6 +29,7 @@ function Recipe() {
             <img src={details.image} alt={details.title} />
         </div>
         <Info>
+          <article>
             <Button 
             className={activeTab === "instructions" ? "active" : ""} onClick={()=>{setActiveTab("instructions")}}
             >
@@ -39,6 +40,7 @@ function Recipe() {
             >
             Ingredients
             </Button>
+            </article>
             {activeTab === "instructions" && (
                 <div>
                 <h3 dangerouslySetInnerHTML={{__html:details.summary}}></h3>
@@ -71,7 +73,14 @@ const DetailWrapper= styled.div`
     font-size:1.5rem;
     margin-bottom:1rem;
  }
- 
+ @media screen and (max-width: 480px) {
+  flex-direction:column;
+  width:100%;
+  
+  img{
+    width:100%;
+  }
+}
 `;
 const Button =styled.button`
  padding:0.5rem 1.5rem;
@@ -81,6 +90,7 @@ const Button =styled.button`
  margin-right:2rem;
  font-weight:600;
  cursor:pointer;
+ 
 `;
 const Info= styled.div`
 margin-top:2.8rem;
@@ -98,6 +108,12 @@ margin-top:2.8rem;
 }
 ul{
   margin-top:1rem;
+}
+article{
+  @media screen and (max-width: 480px){
+    display:flex;
+}
+
 }
 `;
 
