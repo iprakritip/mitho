@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/splide/dist/css/splide.min.css';
+import { Link } from "react-router-dom";
 
 const Trending = () => {
 
@@ -37,15 +38,17 @@ const [trending, setTrending]= useState([]);
             arrows:false,
             pagination:false,
             drag: "free",
-            gap: "5rem",
+            gap: "1rem",
            }}>
            {trending.map((recipe)=>{
             return(
               <SplideSlide key={recipe.id}>
               <Card>
+                <Link to={"/recipe/"+recipe.id}>
                 <p>{recipe.title}</p> 
                 <img src={recipe.image} alt={recipe.title} />  
                 <Gradient />
+                </Link>
               </Card>
               </SplideSlide>
               );
@@ -62,17 +65,21 @@ margin: 4rem 0;
 h4{
   margin-bottom:1rem;
 }
+@media screen and (max-width: 480px) {
+  display:flex;
+  flex-direction:column;
+}
 `;
 const Card = styled.div`
-min-height:25rem;
+min-height:15rem;
 overflow:hidden;
 position:relative;
-border-radius:2rem;
+border-radius:1rem;
 
  img{
   position:absolute;
   left:0;
-  border-radius:2rem;
+  border-radius:1rem;
   width:100%;
   height:100%;
   object-fit:cover;
@@ -87,8 +94,8 @@ border-radius:2rem;
   width:100%;
   text-align:center;
   font-weight:600;
-  font-size:1rem;
-  height:40%;
+  font-size:0.8rem;
+  height:20%;
   display:flex;
   justify-content:center;
   align-items:center;

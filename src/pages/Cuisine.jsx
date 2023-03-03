@@ -17,7 +17,7 @@ const Cuisine = () => {
  }
  useEffect(()=>{
    getCuisine(params.type);
-   console.log(params.type); 
+   
  },[params.type]);
 
   return (
@@ -25,9 +25,10 @@ const Cuisine = () => {
         {cuisine.map((item)=>{
             return (
             <Card key={item.id}>
+            <Link to={"/recipe/"+ item.id}>
                 <img src={item.image} alt={item.title} />
                 <h4>{item.title}</h4>
-
+            </Link>
             </Card>
             )
         })}
@@ -37,12 +38,12 @@ const Cuisine = () => {
 const Grid =styled.div`
  display:grid;
  grid-template-columns:repeat(auto-fit, minmax(20rem,1fr));
- grid-gap:3rem;
+ grid-gap:1rem;
 `;
 const Card = styled.div`
  img{
     width:100%;
-    border-radius:2rem;
+    border-radius:1rem;
  }
  a{
     text-decoration:none;

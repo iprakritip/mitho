@@ -29,7 +29,10 @@ function Category() {
 const List = styled.div`
  display:flex;
  justify-content:center;
- margin: 2rem 0;
+ margin: 1rem 0;
+ @media screen and (max-width: 480px) {
+    
+  }
 `;
 const SLink =styled(NavLink)`
  display:flex;
@@ -43,7 +46,7 @@ const SLink =styled(NavLink)`
  width:6rem;
  height:6rem;
  cursor : pointer;
- transform: scale(0.8);
+ transform: scale(0.7);
 
  h4{
     color:#fff;

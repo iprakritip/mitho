@@ -25,7 +25,7 @@ const Search = () => {
 }
 
 const FormStyle= styled.form`
- padding:0 20rem;
+ padding:0 14rem;
  width:100%;
 
 div{
@@ -36,12 +36,17 @@ position:relative;
  input{
     border:none;
     background:linear-gradient(35deg, #494949, #313131);
-    font-size:1.5rem;
+    font-size:0.8rem;
     color:white;
     padding:1rem 3rem;
     border-radius:1rem;
     outline:none;
     width:100%;
+    @media screen and (max-width: 480px) {
+      height:0.8rem;
+      border-radius:0.5rem;
+      font-size:0.7rem;
+    }
  }
 
  svg{
@@ -51,6 +56,9 @@ position:relative;
     transform:translate(100%,-50%);
     color:#fff;
  }
+ @media screen and (max-width: 480px) {
+  padding:0 1rem;
+}
 `;
 
 export default Search
