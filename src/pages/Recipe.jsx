@@ -47,7 +47,7 @@ function Recipe() {
             )}
             {activeTab === "instructions" && (
                  <ul>
-                  {details.extendedIngredients.map((ingredient)=>{
+                  {details?.extendedIngredients?.length>0 && details.extendedIngredients.map((ingredient)=>{
                     return(
                         <li key={ingredient.id}>{ingredient.original}</li>
                     );
@@ -61,25 +61,20 @@ function Recipe() {
 }
 
 const DetailWrapper= styled.div`
- margin: 10rem 0 5rem;
+ margin: 4rem 0 5rem;
  display:flex;
  .active{
     background:linear-gradient(35deg, #494949, #313131); 
     color:#fff;
  }
  h2{
-    font-size:2rem;
+    font-size:1.5rem;
+    margin-bottom:1rem;
  }
- li{
-    font-size:1.2rem;
-    line-height:2.5rem;
- }
- ul{
-    margin-top:2rem;
- }
+ 
 `;
 const Button =styled.button`
- padding:1rem 2rem;
+ padding:0.5rem 1.5rem;
  color: #313131;
  background:#fff;
  border: 2px solid black;
@@ -87,7 +82,22 @@ const Button =styled.button`
  font-weight:600;
 `;
 const Info= styled.div`
- margin-left:10rem;
+margin-top:2.8rem;
+ margin-left:2rem;
+
+ h3{
+  font-size:1rem;
+  line-height:2rem;
+  margin-top:1rem;
+  font-weight:400;
+ }
+ li{
+  font-size:1rem;
+  line-height:2rem;
+}
+ul{
+  margin-top:1rem;
+}
 `;
 
 export default Recipe

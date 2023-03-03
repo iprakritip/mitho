@@ -11,7 +11,7 @@ const Veg = () => {
 
    const check=localStorage.getItem("veg");
 
-   if(check){
+   if(check!== undefined && check!=='undefined'){
      setVeg(JSON.parse(check));
    }else{
     const api = await fetch(
@@ -33,10 +33,11 @@ const Veg = () => {
           <h4>Our Vegeterian Picks</h4>
           <Splide options={{
             perPage:3,
-            arrows:false,
+            arrows:true,
             pagination:false,
             drag: "free",
             gap: "2rem",
+            
            }}>
            {veg.map((recipe)=>{
             return(
@@ -93,6 +94,9 @@ border-radius:1rem;
   justify-content:center;
   align-items:center;
  }
+ @media screen and (max-width: 480px) {
+ min-height:15rem;   
+}
 `;
 
 const Gradient = styled.div`

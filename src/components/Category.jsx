@@ -55,6 +55,16 @@ const SLink =styled(NavLink)`
  svg{
     color:#fff;
     font-size: 1.5rem;
+ @media screen and (max-width: 480px) {
+    margin:0;
+    border-radius: 25%;
+    
+
+    svg{
+        font-size:0.5rem;
+    }
+    }
+    
  }
  &.active{
     background:linear-gradient(to right, #f27121, #e94057);
