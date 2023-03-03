@@ -94,6 +94,9 @@ border-radius:1rem;
   justify-content:center;
   align-items:center;
  }
+ &:hover{
+  opacity:0.9;
+ }
  @media screen and (max-width: 480px) {
  min-height:15rem;   
 }

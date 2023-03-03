@@ -83,6 +83,7 @@ border-radius:1rem;
   width:100%;
   height:100%;
   object-fit:cover;
+  
  }
  p{
   position:absolute;
@@ -99,6 +100,9 @@ border-radius:1rem;
   display:flex;
   justify-content:center;
   align-items:center;
+ }
+ &:hover{
+  opacity:0.9;
  }
 `;
 

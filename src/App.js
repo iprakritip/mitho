@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter> 
-       <Nav>
-        <img src={logo} alt="mitho-logo" />
+       <Nav to={"/"}>
+         <img src={logo} alt="mitho-logo" />
        </Nav>
        <Search />
        <Category />
@@ -20,12 +20,14 @@ function App() {
     </div>
   );
 }
+
 const Nav=styled.nav`
 display:flex;
 justify-content:left;
 width:8%;
 height:8%;
 margin: 0.8rem 0;
+cursor:pointer;
 
 img{
   width:100%;
